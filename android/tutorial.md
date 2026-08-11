@@ -14,7 +14,8 @@ invoke-static {v4}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
 the "test" stands for libtest.so which is placed in roblox -> view -> lib folder and either arm64-v8a or x86_64 depending on what ur emulator is, 
 what is required to make our own library .so:
-installing android studio -> new project -> native cpp -> in the cpp folder theres a cpp main native-lib.cpp file
+installing android studio -> new project -> native cpp -> in the cpp folder theres a cpp main native-lib.cpp file that will be the main file for everything,
+ill add printsploit tut in part 2 soon,
 
 to find offsets we go to roblox -> View -> lib -> arm64-v8a/x86_64 -> libroblox.so put it in a shared folder with the pc and the emulator, we open it in ida and we in the "load a new file" popup we choose:
 fill segment gaps, manual load, then click the processor settings and uncheck simplify intrusctions and disable bl jumps, them edit arm architechture and choose ur arm64-v8a or the one u have etc then let it analyze fully, 
@@ -36,7 +37,6 @@ tasksynchronize = "task.synchronize() may only be called from a script that is a
 taskwait = "task.wait is not available for AuroraScripts"
 taskdesynchronize = "task.desynchronize() may only be called from a script that is a descendant of an Actor",
 gameloaded = "onGameLoaded() SessionReporterState_GameLoaded placeId:%lld" string,
-
 
 for example the gameloaded is:
 __int64 __fastcall sub_2290F9C(__int64 a1, __int64 a2) // gameloaded offset
