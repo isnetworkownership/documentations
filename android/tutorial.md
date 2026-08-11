@@ -1,6 +1,6 @@
 PART 1:
 we can use MT Manager for example a cracked version of it obv,
-we click the roblox apk -> View -> hold click classes2.dex -> dex editor plus -> find com->roblox->client->ActivityNativeMain -> find OnCreate that also has .registers 13 aka this
+we click the roblox apk -> View -> hold click classes2.dex -> dex editor plus -> find com->roblox->client->ActivityNativeMain and click it to open it and then -> find OnCreate that also has .registers 13 aka this
 
 .method public onCreate(Landroid/os/Bundle;)V
      .registers 13
